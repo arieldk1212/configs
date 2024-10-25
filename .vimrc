@@ -1,13 +1,25 @@
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasiser/vim-code-dark'
-Plug 'vim-airline/vim-airline'
+Plug 'mohvn/peachpuff-legacy'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'preservim/nerdtree' |
 	\ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-colorscheme codedark
 syntax on
+set background=dark
+colorscheme peachpuff
+
+highlight! link SignColumn LineNr 
+autocmd ColorScheme * highlight! link SignColumn LineNr 
+
+highlight! link CocFloating FgCocWarningFloatBgCocFloating
+autocmd ColorScheme * hi link CocFloating FgCocWarningFloatBgCocFloating
+
+autocmd FileType * hi clear conceal 
+
+hi statusline ctermfg=127
 
 set number
 set tabstop=2 shiftwidth=2
@@ -30,3 +42,9 @@ inoremap <silent><expr> <Tab>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
+inoremap { {}<Esc>ha
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha
