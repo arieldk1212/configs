@@ -19,13 +19,18 @@ autocmd ColorScheme * hi link CocFloating FgCocWarningFloatBgCocFloating
 
 autocmd FileType * hi clear conceal 
 
-hi statusline ctermfg=127
+hi clear statusline 
+hi clear StatusLineNC
+hi clear CursorLine
+hi clear VertSplit
 
 set number
 set tabstop=2 shiftwidth=2
 set expandtab ai
 set hlsearch ruler
 highlight Comment ctermfg=green
+
+nnoremap <esc> :noh<return><esc>
 
 let NERDTreeShowHidden=1
 
