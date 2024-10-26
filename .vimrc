@@ -28,6 +28,7 @@ set number
 set tabstop=2 shiftwidth=2
 set expandtab ai
 set hlsearch ruler
+set mouse=a
 highlight Comment ctermfg=green
 
 nnoremap <esc> :noh<return><esc>
