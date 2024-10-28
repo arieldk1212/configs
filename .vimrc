@@ -20,6 +20,10 @@ if 0
   autocmd FileType * hi clear conceal 
 else
   colorscheme codedark
+
+  hi clear CocFloating
+
+  autocmd FileType * hi clear conceal
 endif
 
 hi clear statusline 
