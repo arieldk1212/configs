@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'tomasiser/vim-code-dark'
 Plug 'mohvn/peachpuff-legacy'
+Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'preservim/nerdtree' |
@@ -36,6 +37,7 @@ set tabstop=2 shiftwidth=2
 set expandtab ai
 set hlsearch ruler
 set mouse=a
+set clipboard=unnamed
 highlight Comment ctermfg=green
 
 nnoremap <esc> :noh<return><esc>
