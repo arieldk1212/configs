@@ -1,0 +1,5 @@
+to start -> type tmux in terminal
+then Ctrl+b % to open a new tab
+Ctrl+b ; to jump between
+Ctrl+b o to jump and flip between
+Ctrl+b " to open tab in the bottom

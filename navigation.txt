@@ -1,0 +1,19 @@
+TMUX ->
+  1. ctrl+% = split
+  2. ctrl+" = split below
+  3. ctrl+; = navigate
+
+TERMINAL ->
+  1. command+t = new tab
+  2. command+w = remove tab
+  3. command+1-9 = choose tab number
+  4. command+shift+arrowkey = navigate tabs
+
+VIM ->
+  1. :vs -> split
+  2. :E -> current folder tree
+  3. ctrl+b -> toggle nerd tree
+  4. :tabnew -> create new tab
+  5. :gt -> next tab
+  6. :1-9gt -> tab number
+  7. ctrl+ww -> navigate tabs

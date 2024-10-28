@@ -10,7 +10,7 @@ call plug#end()
 
 syntax on
 set background=dark
-if 0
+if 1
   colorscheme peachpuff
   highlight! link SignColumn LineNr 
   autocmd ColorScheme * highlight! link SignColumn LineNr 
@@ -19,6 +19,7 @@ if 0
   autocmd ColorScheme * hi link CocFloating FgCocWarningFloatBgCocFloating
 
   autocmd FileType * hi clear conceal 
+  hi clear TabLineFill
 else
   colorscheme codedark
 

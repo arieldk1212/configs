@@ -1,0 +1,3 @@
+.vim folder in home folder with plugins and and more
+.vimrc in home dir is the config!!
+dont forget PlugInstall, CocInstall coc-clangd, coc-python
