@@ -9,15 +9,18 @@ call plug#end()
 
 syntax on
 set background=dark
-colorscheme peachpuff
+if 0
+  colorscheme peachpuff
+  highlight! link SignColumn LineNr 
+  autocmd ColorScheme * highlight! link SignColumn LineNr 
 
-highlight! link SignColumn LineNr 
-autocmd ColorScheme * highlight! link SignColumn LineNr 
+  highlight! link CocFloating FgCocWarningFloatBgCocFloating
+  autocmd ColorScheme * hi link CocFloating FgCocWarningFloatBgCocFloating
 
-highlight! link CocFloating FgCocWarningFloatBgCocFloating
-autocmd ColorScheme * hi link CocFloating FgCocWarningFloatBgCocFloating
-
-autocmd FileType * hi clear conceal 
+  autocmd FileType * hi clear conceal 
+else
+  colorscheme codedark
+endif
 
 hi clear statusline 
 hi clear StatusLineNC
