@@ -42,7 +42,17 @@
         "[IntelliJ-ish Darcula]": {
             "editor.background": "#1E1F22",
             "terminal.background": "#1f2024",
-            "titleBar.activeBackground": "#23262C",
+            "titleBar.activeBackground": "#1E1F22",
+            "titleBar.inactiveBackground": "#1E1F22",
+            "sideBar.background": "#1E1F22",
+            "activityBar.background": "#1E1F22",
+            "breadcrumb.background": "#1E1F22",
+            "debugToolBar.background": "#1E1F22",
+            "progressBar.background": "#1E1F22",
+            "sideBarSectionHeader.background": "#1E1F22",
+            "statusBar.background": "#1E1F22",
+            "tab.activeBackground": "#1E1F22",
+            "tab.inactiveBackground": "#1E1F22",
         }
     },
     "editor.tokenColorCustomizations": {
