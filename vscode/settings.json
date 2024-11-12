@@ -42,17 +42,22 @@
         "[IntelliJ-ish Darcula]": {
             "editor.background": "#1E1F22",
             "terminal.background": "#1f2024",
-            "titleBar.activeBackground": "#1E1F22",
-            "titleBar.inactiveBackground": "#1E1F22",
-            "sideBar.background": "#1E1F22",
-            "activityBar.background": "#1E1F22",
+            "titleBar.activeBackground": "#2c2e32",
+            "titleBar.inactiveBackground": "#2c2e32",
+            "sideBar.background": "#2c2e32",
+            "sideBar.foreground": "#ffffff",
+            "activityBar.background": "#2c2e32",
+            "activityBar.foreground": "#ffffff",
+            "activityBar.border": "#000000",
             "breadcrumb.background": "#1E1F22",
-            "debugToolBar.background": "#1E1F22",
-            "progressBar.background": "#1E1F22",
-            "sideBarSectionHeader.background": "#1E1F22",
-            "statusBar.background": "#1E1F22",
+            "debugToolBar.background": "#2c2e32",
+            "progressBar.background": "#2c2e32",
+            "sideBarSectionHeader.background": "#2c2e32",
+            "statusBar.background": "#2c2e32",
             "tab.activeBackground": "#1E1F22",
             "tab.inactiveBackground": "#1E1F22",
+            "tab.activeBorder": "#57AAF7",
+            // "tab.activeForeground": "#57AAF7",
         }
     },
     "editor.tokenColorCustomizations": {
@@ -88,8 +93,8 @@
                         "string.quoted.double.cpp",
                     ],
                     "settings": {
-                    //   "foreground": "#f67b55"
-                      "foreground": "#57BF63"
+                      "foreground": "#6AAB73"
+                    //   "foreground": "#57BF63"
                     //   "foreground": "#ce7155"
                     }
                 },
@@ -101,6 +106,7 @@
                         "support.class.cpp",
                         "support.type.cpp",
                         "storage.modifier.reference.cpp",
+                        "entity.name.scope-resolution.cpp"
                     ],
                     "settings": {
                       "foreground": "#B5B6E3",
@@ -135,16 +141,23 @@
                         "constant.character.escape.cpp",
                         "constant.other.placeholder",
                         "meta.parens.cpp",
-                        "keyword.control.do.cpp"
+                        "keyword.control.do.cpp",
+                        "storage.type",
+                        "keyword.other.typedef.cpp",
+                        "storage.modifier",
+                        "keyword.other.default.function.cpp",
+                        "keyword.other.operator.overload.cpp",
+
                     ],
                     "settings": {
-                        "foreground": "#DB7E32",
+                        "foreground": "#CF8E6D",
                     }
                 },
                 {
                     "name": "local",
                     "scope": [
-                        "variable.other.constant.cpp"
+                        "variable.other.constant.cpp",
+
                     ],
                     "settings": {
                         "foreground": "#415EB6",
@@ -153,7 +166,8 @@
                 {
                     "name": "members",
                     "scope": [
-                        "variable.other.property.cpp"
+                        "variable.other.property.cpp",
+                        // "support.other.attribute.cpp"
                     ],
                     "settings": {
                         "foreground": "#9373A5",
