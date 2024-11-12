@@ -1,0 +1,80 @@
+<application>
+  <component name="BackendCodeEditorApplicationSettings">
+    <option name="/Default/Environment/InlayHints/CppParameterNameHintsOptions2/HideForNonLiterals/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Environment/InlayHints/CppAggregateHintsOptions/ShowArrayIndexHints/@EntryValue" value="Default" type="string" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=2af04edc_002Dd297_002D4488_002D8e72_002Dda37d50335ab/@EntryIndexedValue" value="" type="string" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=ad7ebfe3_002Db8eb_002D4c5a_002D8fe2_002D130256be83e4/@EntryIndexRemoved" value="true" type="bool" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=2af04edc_002Dd297_002D4488_002D8e72_002Dda37d50335ab/@EntryIndexRemoved" value="true" type="bool" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=ad7ebfe3_002Db8eb_002D4c5a_002D8fe2_002D130256be83e4/@EntryIndexedValue" value="" type="string" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=915fed99_002Da2cf_002D4c91_002Db0df_002Dbc3f48418f81/@EntryIndexRemoved" value="true" type="bool" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=b4fa6693_002D2119_002D46d1_002D853b_002D428076b2ef1e/@EntryIndexRemoved" value="true" type="bool" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=915fed99_002Da2cf_002D4c91_002Db0df_002Dbc3f48418f81/@EntryIndexedValue" value="" type="string" />
+    <option name="/Default/Environment/InlayHints/CppTypeConversionHintsOptions/ExclusionList/=b4fa6693_002D2119_002D46d1_002D853b_002D428076b2ef1e/@EntryIndexedValue" value="" type="string" />
+    <option name="/Default/Environment/InlayHints/CppAggregateHintsOptions/ExclusionList/=9c3b69e9_002Daef0_002D4467_002Dadf3_002D11855f1558f4/@EntryIndexedValue" value="" type="string" />
+    <option name="/Default/Environment/InlayHints/CppAggregateHintsOptions/ExclusionList/=9c3b69e9_002Daef0_002D4467_002Dadf3_002D11855f1558f4/@EntryIndexRemoved" value="true" type="bool" />
+    <option name="/Default/Environment/InlayHints/CppParameterNameHintsOptions2/ShowParameterNameHintsInMacroCalls/@EntryValue" value="Default" type="string" />
+  </component>
+  <component name="CodeFoldingSettings">
+    <option name="COLLAPSE_IMPORTS" value="false" />
+    <option name="COLLAPSE_FILE_HEADER" value="false" />
+  </component>
+  <component name="CodeInsightSettings">
+    <option name="AUTO_POPUP_JAVADOC_INFO" value="true" />
+  </component>
+  <component name="CodeVisionSettings">
+    <option name="codeVisionGroupToPosition">
+      <map>
+        <entry key="component.usage" value="Default" />
+        <entry key="inheritors" value="Default" />
+        <entry key="references" value="Default" />
+        <entry key="vcs.code.vision" value="Default" />
+      </map>
+    </option>
+    <option name="defaultPosition" value="Top" />
+  </component>
+  <component name="DeclarativeInlayHintsSettings">
+    <option name="enabledOptions">
+      <map>
+        <entry key="js.type.hints#function.returns" value="true" />
+        <entry key="js.type.hints#non.paren.single.param" value="true" />
+        <entry key="js.type.hints#parameters.in.parens" value="true" />
+        <entry key="js.type.hints#variables.and.fields" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.for.asterisk" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.for.set.operations" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.in.insert.values" value="true" />
+        <entry key="sql.column.names.inlay.hints#sql.show.column.names.in.select" value="true" />
+        <entry key="sql.join.cardinality.hints#full.join" value="true" />
+        <entry key="sql.join.cardinality.hints#inner.join" value="true" />
+        <entry key="sql.join.cardinality.hints#left.join" value="true" />
+        <entry key="sql.join.cardinality.hints#right.join" value="true" />
+        <entry key="ts.type.hints#function.returns" value="true" />
+        <entry key="ts.type.hints#non.paren.single.param" value="true" />
+        <entry key="ts.type.hints#parameters.in.parens" value="true" />
+        <entry key="ts.type.hints#variables.and.fields" value="true" />
+      </map>
+    </option>
+    <option name="providerIdToEnabled">
+      <map>
+        <entry key="js.chain.hints" value="true" />
+        <entry key="js.type.hints" value="true" />
+        <entry key="qodana.yaml.inspection.descriptions" value="true" />
+        <entry key="sql.column.names.inlay.hints" value="true" />
+        <entry key="sql.join.cardinality.hints" value="true" />
+        <entry key="ts.chain.hints" value="true" />
+        <entry key="ts.enum.hints" value="true" />
+        <entry key="ts.type.hints" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="EditorSettings">
+    <option name="IS_RIGHT_MARGIN_SHOWN" value="false" />
+    <option name="USE_EDITOR_FONT_IN_INLAYS" value="true" />
+    <option name="ADDITIONAL_PAGE_AT_BOTTOM" value="true" />
+  </component>
+  <component name="InlayHintsSettings">
+    <option name="lastViewedProviderKeyId" value="TypeScript.ts.type.hints.non.paren.single.param" />
+  </component>
+  <component name="InlineCompletionOnboarding">
+    <option name="onboardingFinished" value="true" />
+  </component>
+</application>

@@ -1,0 +1,55 @@
+<scheme name="_@user_Dark" version="142" parent_scheme="Darcula">
+  <option name="FONT_SCALE" value="1.0" />
+  <metaInfo>
+    <property name="ide">CLion</property>
+    <property name="ideVersion">2024.2.2.0.0</property>
+    <property name="originalScheme">Dark</property>
+    <property name="partialSave">true</property>
+    <property name="pluginId">com.intellij</property>
+  </metaInfo>
+  <option name="LINE_SPACING" value="1.2" />
+  <option name="EDITOR_FONT_SIZE" value="12" />
+  <option name="EDITOR_FONT_NAME" value="Menlo" />
+  <attributes>
+    <option name="OC.DEPENDENT_CODE">
+      <value />
+    </option>
+    <option name="OC.DIRECTIVE">
+      <value>
+        <option name="FOREGROUND" value="b371bd" />
+      </value>
+    </option>
+    <option name="OC.GLOBAL_VARIABLE">
+      <value />
+    </option>
+    <option name="OC.HEADER_PATH">
+      <value>
+        <option name="FOREGROUND" value="f67b55" />
+      </value>
+    </option>
+    <option name="OC.LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="415eb6" />
+      </value>
+    </option>
+    <option name="OC.MACRONAME">
+      <value>
+        <option name="FOREGROUND" value="3a96ec" />
+      </value>
+    </option>
+    <option name="OC.MACRO_PARAMETER">
+      <value />
+    </option>
+    <option name="OC.PARAMETER">
+      <value />
+    </option>
+    <option name="OC.TEMPLATE_TYPE">
+      <value>
+        <option name="FOREGROUND" value="57bf63" />
+      </value>
+    </option>
+    <option name="OC.TYPEDEF">
+      <value />
+    </option>
+  </attributes>
+</scheme>
