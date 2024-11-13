@@ -127,6 +127,7 @@
                     "scope": [
                         "entity.name.function.member.cpp",
                         "entity.name.function.preprocessor.cpp",
+                        "entity.name.function.cpp"
                     ],
                     "settings": {
                         "foreground": "#56A8F5",
