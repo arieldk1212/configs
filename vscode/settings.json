@@ -179,7 +179,8 @@
                         "comment.line.double-slash.cpp"
                     ],
                     "settings": {
-                        // "foreground": "#628077",
+                        // "foreground": "#73AD2B",
+                        // "foreground": "#8BB33D"
                     }
                 },
             ]
