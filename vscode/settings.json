@@ -181,6 +181,7 @@
                     "settings": {
                         // "foreground": "#73AD2B",
                         // "foreground": "#8BB33D"
+                        "fontStyle": "italic"
                     }
                 },
             ]
