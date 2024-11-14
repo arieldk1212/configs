@@ -1,38 +1,36 @@
 {
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "editor.fontSize": 16,
-    "cmake.showOptionsMovedNotification": false,
-    "workbench.startupEditor": "none",
-    "workbench.settings.applyToAllProfiles": [
-        "files.autoSave"
-    ],
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.fontSize": 14,
     "terminal.integrated.fontSize": 16,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "workbench.startupEditor": "none",
+    "workbench.settings.applyToAllProfiles": ["files.autoSave"],
     "extensions.ignoreRecommendations": true,
-    "cmake.showConfigureWithDebuggerNotification": false,
+
     "git.openRepositoryInParentFolders": "never",
-    "editor.accessibilitySupport": "off",
-    "C_Cpp.default.cppStandard": "c++14",
+
+    "C_Cpp.intelliSenseEngine": "disabled",
+
     "[cpp]": {
         "editor.wordBasedSuggestions": "off",
-        "editor.semanticHighlighting.enabled": true,
         "editor.stickyScroll.defaultModel": "foldingProviderModel",
         "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+        "editor.defaultFormatter": "xaver.clang-format",
+        // "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd", // if clangd extension downloaded.
     },
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "vim.vimrc.path": "$HOME/.vimrc",
-    "vim.vimrc.enable": true,
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask",
+    ],
+
     "hediet.vscode-drawio.resizeImages": null,
     "hediet.vscode-drawio.codeLinkActivated": false,
-    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
     "workbench.colorTheme": "IntelliJ-ish Darcula",
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
     "workbench.colorCustomizations": {
         "editorBracketHighlight.foreground1": "#BCBEC4",
         "editorBracketHighlight.foreground2": "#BCBEC4",
@@ -76,6 +74,7 @@
                     "name": "template",
                     "scope": [
                         "entity.name.type.parameter",
+                        "entity.name.type.template.cpp"
                         // "string.quoted.double.cpp",
                     ],
                     "settings": {
@@ -106,7 +105,7 @@
                         "support.class.cpp",
                         "support.type.cpp",
                         "storage.modifier.reference.cpp",
-                        "entity.name.scope-resolution.cpp"
+                        "entity.name.scope-resolution.cpp",
                     ],
                     "settings": {
                       "foreground": "#B5B6E3",
@@ -127,7 +126,7 @@
                     "scope": [
                         "entity.name.function.member.cpp",
                         "entity.name.function.preprocessor.cpp",
-                        "entity.name.function.cpp"
+                        "entity.name.function.cpp",
                     ],
                     "settings": {
                         "foreground": "#56A8F5",
@@ -158,7 +157,6 @@
                     "name": "local",
                     "scope": [
                         "variable.other.constant.cpp",
-
                     ],
                     "settings": {
                         "foreground": "#415EB6",
@@ -187,5 +185,6 @@
                 },
             ]
         }
-    }
+    },
+   
 }

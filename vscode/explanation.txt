@@ -1,0 +1,12 @@
+extensions:
+1. clangd
+2. clangd-format
+3. C/C++ microsoft -> a must because if not theme changes colors.. its disabled in settings.json
+4. cmake
+5. cmake tools
+6. codelldb
+7. vim
+8. makefile tools
+9. draw.io
+10. doxygen documentation generator
+11. docker
