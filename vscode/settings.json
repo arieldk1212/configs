@@ -1,7 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "workbench.startupEditor": "none",
@@ -12,13 +12,13 @@
 
     "C_Cpp.intelliSenseEngine": "disabled",
 
-    "[cpp]": {
-        "editor.wordBasedSuggestions": "off",
-        "editor.stickyScroll.defaultModel": "foldingProviderModel",
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "xaver.clang-format",
-        // "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd", // if clangd extension downloaded.
-    },
+    "clangd.arguments": ["--compile-commands-dir=build"], // in cmake -> set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+    "editor.wordBasedSuggestions": "off",
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "xaver.clang-format",
+    // "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd", // if clangd extension downloaded.
 
     "cmake.options.statusBarVisibility": "visible",
     "cmake.showOptionsMovedNotification": false,
