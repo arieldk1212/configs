@@ -1,7 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "editor.fontSize": 15,
+    "editor.fontSize": 14,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "workbench.startupEditor": "none",
@@ -30,7 +30,6 @@
     "hediet.vscode-drawio.resizeImages": null,
     "hediet.vscode-drawio.codeLinkActivated": false,
     "workbench.colorTheme": "IntelliJ-ish Darcula",
-    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
     "workbench.colorCustomizations": {
         "editorBracketHighlight.foreground1": "#BCBEC4",
         "editorBracketHighlight.foreground2": "#BCBEC4",
@@ -186,5 +185,9 @@
             ]
         }
     },
-   
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "github.copilot.enable": {
+        "*": false
+    },
 }
