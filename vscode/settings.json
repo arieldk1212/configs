@@ -29,7 +29,6 @@
 
     "hediet.vscode-drawio.resizeImages": null,
     "hediet.vscode-drawio.codeLinkActivated": false,
-    "workbench.colorTheme": "IntelliJ-ish Darcula",
     "workbench.colorCustomizations": {
         "editorBracketHighlight.foreground1": "#BCBEC4",
         "editorBracketHighlight.foreground2": "#BCBEC4",
@@ -190,4 +189,6 @@
     "github.copilot.enable": {
         "*": false
     },
+    "lldb.suppressUpdateNotifications": true,
+    "workbench.colorTheme": "IntelliJ-ish Darcula",
 }
