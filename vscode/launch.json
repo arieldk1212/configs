@@ -25,5 +25,13 @@
       "clean": false,
       "configureAll": false
     },
+    {
+      "name": "CMake: Clean and Debug Application",
+      "type": "cmake",
+      "request": "launch",
+      "cmakeDebugType": "configure",
+      "clean": true,
+      "configureAll": false
+    }
   ]
 }
