@@ -10,3 +10,10 @@ extensions:
 9. draw.io
 10. doxygen documentation generator
 11. docker
+12. hex editor
+13. github repositories
+14. remote repositories
+15. jetbrains icon theme
+16. github pull requests
+17. azure repos
+18. copilot
