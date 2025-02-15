@@ -17,3 +17,6 @@ extensions:
 16. github pull requests
 17. azure repos
 18. copilot
+19. IntelliJ-ish Darcula Theme
+
+font size -> 14, tab -> 2, font -> Menlo, Monaco, 'Courier New', monospace
