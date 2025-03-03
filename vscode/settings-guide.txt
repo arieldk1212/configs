@@ -1,0 +1,6 @@
+theres a global settings.json, we can have a local settings.json and in there insert the following:
+{
+  "cmake.sourceDirectory": "/Users/arielkriheli/Projects/llvm-project/llvm",
+  "cmake.configureArgs": ["-DLLVM_INCLUDE_TESTS=OFF"]
+}
+we can specify the cmake file path here and macros we want to disable/enable during compilation.
