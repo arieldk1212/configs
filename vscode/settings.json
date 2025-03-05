@@ -27,168 +27,182 @@
         "workbench.action.tasks.runTask",
     ],
 
-    "hediet.vscode-drawio.resizeImages": null,
-    "hediet.vscode-drawio.codeLinkActivated": false,
-    "workbench.colorCustomizations": {
-        "editorBracketHighlight.foreground1": "#BCBEC4",
-        "editorBracketHighlight.foreground2": "#BCBEC4",
-        "editorBracketHighlight.foreground3": "#BCBEC4",
-        "editorBracketHighlight.foreground5": "#BCBEC4",
-        "editorBracketHighlight.foreground6": "#BCBEC4",
-        "[IntelliJ-ish Darcula]": {
-            "editor.background": "#1E1F22",
-            "terminal.background": "#1f2024",
-            "titleBar.activeBackground": "#2c2e32",
-            "titleBar.inactiveBackground": "#2c2e32",
-            "sideBar.background": "#2c2e32",
-            "sideBar.foreground": "#ffffff",
-            "activityBar.background": "#2c2e32",
-            "activityBar.foreground": "#ffffff",
-            "activityBar.border": "#000000",
-            "breadcrumb.background": "#1E1F22",
-            "debugToolBar.background": "#2c2e32",
-            "progressBar.background": "#2c2e32",
-            "sideBarSectionHeader.background": "#2c2e32",
-            "statusBar.background": "#2c2e32",
-            "tab.activeBackground": "#1E1F22",
-            "tab.inactiveBackground": "#1E1F22",
-            "tab.activeBorder": "#57AAF7",
-            // "tab.activeForeground": "#57AAF7",
-        }
-    },
-    "editor.tokenColorCustomizations": {
-        "[IntelliJ-ish Darcula]": {
-            "textMateRules": [
-                {
-                    "name": "include",
-                    "scope": [
-                        "keyword.control",
-                    ],
-                    "settings": {
-                    "foreground": "#B371BD"
-                    }
-                },
-                {
-                    "name": "template",
-                    "scope": [
-                        "entity.name.type.parameter",
-                        "entity.name.type.template.cpp"
-                        // "string.quoted.double.cpp",
-                    ],
-                    "settings": {
-                      "foreground": "#57BF63"
-                    }
-                },
-                {
-                    "name": "path",
-                    "scope": [
-                        "meta.preprocessor.include.cpp",
-                        "string.quoted.double.include.cpp",
-                        "string.quoted.other.lt-gt.include.cpp",
-                        "punctuation.definition.string.end.cpp",
-                        "punctuation.definition.string.begin.cpp",
-                        "string.quoted.double.cpp",
-                    ],
-                    "settings": {
-                      "foreground": "#6AAB73"
-                    //   "foreground": "#57BF63"
-                    //   "foreground": "#ce7155"
-                    }
-                },
-                {
-                    "name": "class",
-                    "scope": [
-                        "entity.name.function.definition.special.member.destructor.cpp",
-                        "entity.name.type.class.cpp",
-                        "support.class.cpp",
-                        "support.type.cpp",
-                        "storage.modifier.reference.cpp",
-                        "entity.name.scope-resolution.cpp",
-                    ],
-                    "settings": {
-                      "foreground": "#B5B6E3",
-                    }
-                },
-                {
-                    "name": "function call",
-                    "scope": [
-                        "support.function.cpp",
-                        "entity.name.function.call.cpp",
-                    ],
-                    "settings": {
-                        "foreground": "#BCBEC4",
-                    }
-                },
-                {
-                    "name": "function decleration",
-                    "scope": [
-                        "entity.name.function.member.cpp",
-                        "entity.name.function.preprocessor.cpp",
-                        "entity.name.function.cpp",
-                    ],
-                    "settings": {
-                        "foreground": "#56A8F5",
-                    }
-                },
-                {
-                    "name": "if",
-                    "scope": [
-                        "keyword.control.if.cpp",
-                        "keyword.control.else.cpp",
-                        "keyword.control.while.cpp",
-                        "constant.character.escape.cpp",
-                        "constant.other.placeholder",
-                        "meta.parens.cpp",
-                        "keyword.control.do.cpp",
-                        "storage.type",
-                        "keyword.other.typedef.cpp",
-                        "storage.modifier",
-                        "keyword.other.default.function.cpp",
-                        "keyword.other.operator.overload.cpp",
+/*
+TO BUILD LLVM AND CONTRIBUTE:
+"cmake.sourceDirectory": "/Users/arielkriheli/Projects/llvm-project/llvm", // here choose CMakeLists.txt Path
+"cmake.configureArgs": ["-DLLVM_INCLUDE_TESTS=ON", "-DLLVM_ENABLE_PROJECTS=clang", "-DLLVM_TARGETS_TO_BUILD=all",
+"-DLLVM_TARGET_TO_BUILD=ARM" ,"-DLLVM_ENABLE_ASSERTIONS=true", "-DLLVM_BUILD_TESTS=ON", "-DCMAKE_BUILD_TYPE=Release"]
 
-                    ],
-                    "settings": {
-                        "foreground": "#CF8E6D",
-                    }
-                },
-                {
-                    "name": "local",
-                    "scope": [
-                        "variable.other.constant.cpp",
-                    ],
-                    "settings": {
-                        "foreground": "#415EB6",
-                    }
-                },
-                {
-                    "name": "members",
-                    "scope": [
-                        "variable.other.property.cpp",
-                        // "support.other.attribute.cpp"
-                    ],
-                    "settings": {
-                        "foreground": "#9373A5",
-                    }
-                },
-                {
-                    "name": "comment",
-                    "scope": [
-                        "comment.line.double-slash.cpp"
-                    ],
-                    "settings": {
-                        // "foreground": "#73AD2B",
-                        // "foreground": "#8BB33D"
-                        "fontStyle": "italic"
-                    }
-                },
-            ]
-        }
-    },
+TO USE AS A STATIC LIBRARY:
+1. add to cmakelists file the following:
+    * enable_language(C)
+    * find_package(LLVM REQUIRED CONFIG)
+    * target_link_libraries(src PRIVATE LLVMCore LLVMSupport)
+    * include_directories(${LLVM_INCLUDE_DIRS})
+*/   
+
+    // "hediet.vscode-drawio.resizeImages": null,
+    // "hediet.vscode-drawio.codeLinkActivated": false,
+    // "workbench.colorCustomizations": {
+    //     "editorBracketHighlight.foreground1": "#BCBEC4",
+    //     "editorBracketHighlight.foreground2": "#BCBEC4",
+    //     "editorBracketHighlight.foreground3": "#BCBEC4",
+    //     "editorBracketHighlight.foreground5": "#BCBEC4",
+    //     "editorBracketHighlight.foreground6": "#BCBEC4",
+    //     "[IntelliJ-ish Darcula]": {
+    //         "editor.background": "#1E1F22",
+    //         "terminal.background": "#1f2024",
+    //         "titleBar.activeBackground": "#2c2e32",
+    //         "titleBar.inactiveBackground": "#2c2e32",
+    //         "sideBar.background": "#2c2e32",
+    //         "sideBar.foreground": "#ffffff",
+    //         "activityBar.background": "#2c2e32",
+    //         "activityBar.foreground": "#ffffff",
+    //         "activityBar.border": "#000000",
+    //         "breadcrumb.background": "#1E1F22",
+    //         "debugToolBar.background": "#2c2e32",
+    //         "progressBar.background": "#2c2e32",
+    //         "sideBarSectionHeader.background": "#2c2e32",
+    //         "statusBar.background": "#2c2e32",
+    //         "tab.activeBackground": "#1E1F22",
+    //         "tab.inactiveBackground": "#1E1F22",
+    //         "tab.activeBorder": "#57AAF7",
+    //         "tab.activeForeground": "#57AAF7",
+    //     }
+    // },
+    // "editor.tokenColorCustomizations": {
+    //     "[IntelliJ-ish Darcula]": {
+    //         "textMateRules": [
+    //             {
+    //                 "name": "include",
+    //                 "scope": [
+    //                     "keyword.control",
+    //                 ],
+    //                 "settings": {
+    //                 "foreground": "#B371BD"
+    //                 }
+    //             },
+    //             {
+    //                 "name": "template",
+    //                 "scope": [
+    //                     "entity.name.type.parameter",
+    //                     "entity.name.type.template.cpp"
+    //                     // "string.quoted.double.cpp",
+    //                 ],
+    //                 "settings": {
+    //                   "foreground": "#57BF63"
+    //                 }
+    //             },
+    //             {
+    //                 "name": "path",
+    //                 "scope": [
+    //                     "meta.preprocessor.include.cpp",
+    //                     "string.quoted.double.include.cpp",
+    //                     "string.quoted.other.lt-gt.include.cpp",
+    //                     "punctuation.definition.string.end.cpp",
+    //                     "punctuation.definition.string.begin.cpp",
+    //                     "string.quoted.double.cpp",
+    //                 ],
+    //                 "settings": {
+    //                   "foreground": "#6AAB73"
+    //                 //   "foreground": "#57BF63"
+    //                 //   "foreground": "#ce7155"
+    //                 }
+    //             },
+    //             {
+    //                 "name": "class",
+    //                 "scope": [
+    //                     "entity.name.function.definition.special.member.destructor.cpp",
+    //                     "entity.name.type.class.cpp",
+    //                     "support.class.cpp",
+    //                     "support.type.cpp",
+    //                     "storage.modifier.reference.cpp",
+    //                     "entity.name.scope-resolution.cpp",
+    //                 ],
+    //                 "settings": {
+    //                   "foreground": "#B5B6E3",
+    //                 }
+    //             },
+    //             {
+    //                 "name": "function call",
+    //                 "scope": [
+    //                     "support.function.cpp",
+    //                     "entity.name.function.call.cpp",
+    //                 ],
+    //                 "settings": {
+    //                     "foreground": "#BCBEC4",
+    //                 }
+    //             },
+    //             {
+    //                 "name": "function decleration",
+    //                 "scope": [
+    //                     "entity.name.function.member.cpp",
+    //                     "entity.name.function.preprocessor.cpp",
+    //                     "entity.name.function.cpp",
+    //                 ],
+    //                 "settings": {
+    //                     "foreground": "#56A8F5",
+    //                 }
+    //             },
+    //             {
+    //                 "name": "if",
+    //                 "scope": [
+    //                     "keyword.control.if.cpp",
+    //                     "keyword.control.else.cpp",
+    //                     "keyword.control.while.cpp",
+    //                     "constant.character.escape.cpp",
+    //                     "constant.other.placeholder",
+    //                     "meta.parens.cpp",
+    //                     "keyword.control.do.cpp",
+    //                     "storage.type",
+    //                     "keyword.other.typedef.cpp",
+    //                     "storage.modifier",
+    //                     "keyword.other.default.function.cpp",
+    //                     "keyword.other.operator.overload.cpp",
+
+    //                 ],
+    //                 "settings": {
+    //                     "foreground": "#CF8E6D",
+    //                 }
+    //             },
+    //             {
+    //                 "name": "local",
+    //                 "scope": [
+    //                     "variable.other.constant.cpp",
+    //                 ],
+    //                 "settings": {
+    //                     "foreground": "#415EB6",
+    //                 }
+    //             },
+    //             {
+    //                 "name": "members",
+    //                 "scope": [
+    //                     "variable.other.property.cpp",
+    //                     // "support.other.attribute.cpp"
+    //                 ],
+    //                 "settings": {
+    //                     "foreground": "#9373A5",
+    //                 }
+    //             },
+    //             {
+    //                 "name": "comment",
+    //                 "scope": [
+    //                     "comment.line.double-slash.cpp"
+    //                 ],
+    //                 "settings": {
+    //                     // "foreground": "#73AD2B",
+    //                     // "foreground": "#8BB33D"
+    //                     "fontStyle": "italic"
+    //                 }
+    //             },
+    //         ]
+    //     }
+    // },
     "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
     "cmake.showConfigureWithDebuggerNotification": false,
     "github.copilot.enable": {
         "*": false
     },
     "lldb.suppressUpdateNotifications": true,
-    "workbench.colorTheme": "IntelliJ-ish Darcula",
+    "lldb.showDisassembly": "always",
 }
