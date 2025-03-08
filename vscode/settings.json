@@ -205,17 +205,14 @@ TO USE AS A STATIC LIBRARY:
     },
     "lldb.suppressUpdateNotifications": true,
     "lldb.showDisassembly": "always",
+    // snyk commands: snyk test --unmanaged, snyk code test, snyk monitor --unmanaged
     "snyk.advanced.cliPath": "/Users/arielkriheli/Library/Application Support/snyk/vscode-cli/snyk-macos-arm64",
     "snyk.yesWelcomeNotification": false,
     "snyk.folderConfigs": [
         {
-            "folderPath": "/Users/arielkriheli/Projects/live-view",
-            "baseBranch": "/Users/arielkriheli/Projects/live-view",
+            "folderPath": "/Users/arielkriheli/Projects/configs",
+            "baseBranch": "main",
             "localBranches": [
-                "add-logging-services",
-                "database",
-                "database-actions",
-                "dev",
                 "main"
             ]
         }
@@ -225,5 +222,5 @@ TO USE AS A STATIC LIBRARY:
     ],
     "snyk.advanced.organization": "102b4d5f-3f10-42d7-9ec4-e95038b43478",
     "snyk.advanced.autoScanOpenSourceSecurity": true,
-    // snyk test --unmanaged
+    "snyk.advanced.additionalParameters": "--unmanaged",
 }
