@@ -1,7 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "workbench.startupEditor": "none",
@@ -205,4 +205,25 @@ TO USE AS A STATIC LIBRARY:
     },
     "lldb.suppressUpdateNotifications": true,
     "lldb.showDisassembly": "always",
+    "snyk.advanced.cliPath": "/Users/arielkriheli/Library/Application Support/snyk/vscode-cli/snyk-macos-arm64",
+    "snyk.yesWelcomeNotification": false,
+    "snyk.folderConfigs": [
+        {
+            "folderPath": "/Users/arielkriheli/Projects/live-view",
+            "baseBranch": "/Users/arielkriheli/Projects/live-view",
+            "localBranches": [
+                "add-logging-services",
+                "database",
+                "database-actions",
+                "dev",
+                "main"
+            ]
+        }
+    ],
+    "snyk.trustedFolders": [
+        "/Users/arielkriheli/Projects/live-view"
+    ],
+    "snyk.advanced.organization": "102b4d5f-3f10-42d7-9ec4-e95038b43478",
+    "snyk.advanced.autoScanOpenSourceSecurity": true,
+    // snyk test --unmanaged
 }
