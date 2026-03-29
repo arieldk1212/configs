@@ -1,10 +1,13 @@
 {
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "editor.fontSize": 19,
+    "editor.fontSize": 18,
     "editor.renderWhitespace": "all",
     "workbench.colorCustomizations": {
-    "statusBar.background": "#41033d", // General background color
+    // "statusBar.background": "#41033d", // General background color
+    "statusBar.background": "#451861", // General background color
+    "activityBar.background": "#451861",
+    "titleBar.activeBackground": "#451861",
     "statusBar.noFolderBackground": "#1a366c", // when no folder is open
     // "statusBar.debuggingBackground": "#52778a" // when debugging
     },
@@ -27,7 +30,7 @@
 
     "C_Cpp.intelliSenseEngine": "disabled",
 
-    "clangd.arguments": ["--compile-commands-dir=build"], // in cmake -> set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+    "clangd.arguments": ["--compile-commands-dir=${workspaceFolder}/build"], // in cmake -> set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
     "editor.wordBasedSuggestions": "off",
     "editor.stickyScroll.defaultModel": "foldingProviderModel",
@@ -38,58 +41,14 @@
     "cmake.options.statusBarVisibility": "visible",
     "cmake.pinnedCommands": [
         "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask",
+        "workbench.action.tasks.runTask"
     ],
     "cmake.showConfigureWithDebuggerNotification": false,
-    "github.copilot.enable": {
-        "*": false
-    },
+    "cmake.configureArgs": [
+        "-DCMAKE_CXX_FLAGS=-Wall -Wextra -Wpedantic"
+    ],
     "lldb.suppressUpdateNotifications": true,
     "lldb.showDisassembly": "never",
-    // snyk commands: snyk test --unmanaged, snyk code test, snyk monitor --unmanaged
-    "snyk.advanced.cliPath": "/Users/arielkriheli/Library/Application Support/snyk/vscode-cli/snyk-macos-arm64",
-    "snyk.yesWelcomeNotification": false,
-    "snyk.advanced.autoSelectOrganization": true,
-    "snyk.folderConfigs": [
-        {
-            "folderPath": "/Users/arielkriheli/picit-client",
-            "baseBranch": "main",
-            "localBranches": [
-                "dev-flutter",
-                "main"
-            ],
-            "preferredOrg": "",
-            "autoDeterminedOrg": "",
-            "orgMigratedFromGlobalConfig": false,
-            "orgSetByUser": true,
-            "featureFlags": {
-                "internal_iaw_enabled": false,
-                "snykCodeConsistentIgnores": false,
-                "snykCodeInlineIgnore": false
-            },
-            "sastSettings": null
-        }
-    ],
-    "snyk.trustedFolders": [
-        "/Users/arielkriheli/Projects/cpp-neural",
-        "/Users/arielkriheli/picit",
-        "/Users/arielkriheli/picit-client",
-        "/Users/arielkriheli/Projects/Camille",
-        "/Users/arielkriheli/Projects/Carty",
-        "/Users/arielkriheli/Projects/musashi",
-        "/Users/arielkriheli/Projects/blank-repo",
-        "/Users/arielkriheli/Downloads/demo",
-        "/Users/arielkriheli/Downloads/iron_dome_game",
-        "/Users/arielkriheli/Projects/iron_dome_game",
-        "/Users/arielkriheli/Projects/AOCPP",
-        "/Users/arielkriheli/Projects/seastar",
-        "/Users/arielkriheli/Projects/fprime",
-        "/Users/arielkriheli/Projects/ladybird",
-        "/Users/arielkriheli/Projects/ClickHouse"
-    ],
-    "snyk.advanced.organization": "102b4d5f-3f10-42d7-9ec4-e95038b43478",
-    "snyk.advanced.autoScanOpenSourceSecurity": true,
-    "snyk.advanced.additionalParameters": "--unmanaged",
     "[cmake]": {
         "editor.defaultFormatter": "cheshirekow.cmake-format"
     },
@@ -139,8 +98,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.fontLigatures": true,
-    "claudeCode.preferredLocation": "panel",
-    "snyk.allIssuesVsNetNewIssues": "All issues",
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
@@ -152,11 +109,7 @@
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "http.systemCertificatesNode": true,
-    "geminicodeassist.inlineSuggestions.enableAuto": false,
     "diffEditor.codeLens": true,
-    "geminicodeassist.displayInlineContextHint": false,
     "editor.formatOnSave": true,
-    "github.copilot.nextEditSuggestions.enabled": true,
-
+    "workbench.colorTheme": "Dark Modern",
 }
