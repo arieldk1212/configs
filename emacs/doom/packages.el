@@ -53,4 +53,26 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 (package! drag-stuff)
+
 (package! naysayer-theme)
+
+;; Required dependency for this specific GitHub theme
+(package! autothemer)
+;; The GitHub theme itself from the repository you linked
+(package! github-emacs-theme
+  :recipe (:host github :repo "ladroid/github-emacs-theme"))
+
+(package! jetbrains-darcula-emacs-theme
+  :recipe (:host github :repo "ianyepan/jetbrains-darcula-emacs-theme"))
+
+(package! vscode-dark-plus-emacs-theme
+  :recipe (:host github :repo "ianyepan/vscode-dark-plus-emacs-theme"))
+
+(package! atom-one-dark-theme
+  :recipe (:host github :repo "jonathanchu/atom-one-dark-theme"))
+
+(package! emacs-theme-gruvbox
+  :recipe (:host github :repo "greduan/emacs-theme-gruvbox"))
+
+(package! monokai-emacs
+  :recipe (:host github :repo "oneKelvinSmith/monokai-emacs"))
