@@ -5,17 +5,14 @@
     "editor.renderWhitespace": "all",
     "workbench.colorCustomizations": {
     // "statusBar.background": "#41033d", // General background color
-    "statusBar.background": "#451861", // General background color
-    "activityBar.background": "#451861",
-    "titleBar.activeBackground": "#451861",
-    "statusBar.noFolderBackground": "#1a366c", // when no folder is open
+    // "statusBar.background": "#451861", // General background color
+    // "activityBar.background": "#451861",
+    // "titleBar.activeBackground": "#451861",
+    // "statusBar.noFolderBackground": "#1a366c", // when no folder is open
     // "statusBar.debuggingBackground": "#52778a" // when debugging
     },
-    // "editor.fontFamily": "space mono, Menlo, Monaco, 'Courier New', monospace",
-    // "editor.fontFamily": "sf mono, Menlo, Monaco, 'Courier New', monospace",
-    // "editor.fontFamily": "Jetbrains Mono, Menlo, Monaco, 'Courier New', monospace",
-    // "editor.fontFamily": "cascadia mono, Menlo, Monaco, 'Courier New', monospace",
-    // "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    // "editor.fontFamily": "space mono",
+    // space mono, sf mono, Jetbrans Mono, cascadia mono, Menlo
     "terminal.integrated.fontSize": 17,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "workbench.startupEditor": "none",
@@ -52,8 +49,6 @@
     "[cmake]": {
         "editor.defaultFormatter": "cheshirekow.cmake-format"
     },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -79,12 +74,6 @@
         "*.sdb": "${capture}.${extname}-*",
         "*.s3db": "${capture}.${extname}-*"
     },
-    "[terraform]": {
-        "editor.defaultFormatter": "hashicorp.terraform"
-    },
-    "[terraform-vars]": {
-        "editor.defaultFormatter": "hashicorp.terraform"
-    },
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-containers"
     },
@@ -92,8 +81,6 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-containers"
     },
     "python.languageServer": "Default",
-    "dart.flutterSdkPath": "/Users/arielkriheli/Downloads/flutter",
-    "dart.sdkPath": "/Users/arielkriheli/Downloads/flutter/bin/cache/dart-sdk",
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -101,15 +88,11 @@
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-    "dart.openDevTools": "flutter",
-    "openapi.securityAuditToken": "CiDvokF8ubbs+j0zmOzIUOBHOXyDF/MR7dJkYclrZGPRwhIYqUFOGmvicPxBV/0rY5Q9qTnoKxSEowsZGnHVG3qwaPFA98nyJ9ScDHngLh/bYQdXbHSkcOE7rxC3zqAfVjCqWEk4WjBkvnQ0C+TFwZRJmp0lesIKZLOBO88p2U+LyjY2rIwwSQEUrl5cE/gZHPAQQ7ERdNKw/RsmcQ/JkAnu59vC7cLt4ZSnN2wqkw==",
     "chat.viewSessions.orientation": "stacked",
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "diffEditor.codeLens": true,
     "editor.formatOnSave": true,
-    "workbench.colorTheme": "Dark Modern",
+    "workbench.colorTheme": "Islands Dark",
 }

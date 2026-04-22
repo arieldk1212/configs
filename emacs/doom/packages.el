@@ -76,3 +76,5 @@
 
 (package! monokai-emacs
   :recipe (:host github :repo "oneKelvinSmith/monokai-emacs"))
+
+(package! catppuccin-theme)
