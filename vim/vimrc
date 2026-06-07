@@ -1,0 +1,23 @@
+syntax on
+
+set background=dark
+colorscheme peachpuff
+
+set number
+set tabstop=2 
+set shiftwidth=2
+set expandtab 
+set ai
+set hlsearch 
+set ruler
+set mouse=a
+set clipboard=unnamed
+highlight Comment ctermfg=green
+
+nnoremap <esc> :noh<return><esc>
+inoremap { {}<Esc>ha
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha

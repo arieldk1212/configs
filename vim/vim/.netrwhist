@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/arielkriheli/.vim'
+let g:netrw_dirhist_0='/Users/arielkriheli/.nvm'
+let g:netrw_dirhist_9='/Users/arielkriheli/Projects/musashi/src/engine'
+let g:netrw_dirhist_8='/Users/arielkriheli/Projects/musashi/src'
+let g:netrw_dirhist_7='/Users/arielkriheli/Projects/musashi'
+let g:netrw_dirhist_6='/Users/arielkriheli/Projects/cpp-neural/mit algorithms course/week2'
+let g:netrw_dirhist_5='/Users/arielkriheli/Projects/live-view/inc/config'
+let g:netrw_dirhist_4='/Users/arielkriheli/Projects/live-view/inc'
+let g:netrw_dirhist_3='/Users/arielkriheli/Projects/live-view'
+let g:netrw_dirhist_2='/Users/arielkriheli/Projects/live-view/src'
