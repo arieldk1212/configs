@@ -1,31 +1,22 @@
 {
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
-    "editor.fontSize": 18,
+    "editor.fontSize": 15,
     "editor.renderWhitespace": "all",
     "workbench.colorCustomizations": {
     // "statusBar.background": "#41033d", // General background color
-    // "statusBar.background": "#451861", // General background color
     // "activityBar.background": "#451861",
     // "titleBar.activeBackground": "#451861",
-    // "statusBar.noFolderBackground": "#1a366c", // when no folder is open
-    // "statusBar.debuggingBackground": "#52778a" // when debugging
     },
-    // "editor.fontFamily": "space mono",
     // space mono, sf mono, Jetbrans Mono, cascadia mono, Menlo
+    // "editor.fontFamily": "fira code",
     "terminal.integrated.fontSize": 17,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "workbench.startupEditor": "none",
     "workbench.settings.applyToAllProfiles": ["files.autoSave"],
     "extensions.ignoreRecommendations": true,
 
-    "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
     "git.openRepositoryInParentFolders": "never",
-
-    "C_Cpp.intelliSenseEngine": "disabled",
 
     "clangd.arguments": ["--compile-commands-dir=${workspaceFolder}/build"], // in cmake -> set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -33,66 +24,52 @@
     "editor.stickyScroll.defaultModel": "foldingProviderModel",
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "xaver.clang-format",
-    // "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd", // if clangd extension downloaded.
-
-    "cmake.options.statusBarVisibility": "visible",
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    "cmake.showConfigureWithDebuggerNotification": false,
-    "cmake.configureArgs": [
-        "-DCMAKE_CXX_FLAGS=-Wall -Wextra -Wpedantic"
-    ],
     "lldb.suppressUpdateNotifications": true,
     "lldb.showDisassembly": "never",
     "[cmake]": {
         "editor.defaultFormatter": "cheshirekow.cmake-format"
     },
     "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.fontLigatures": true,
+    "chat.viewSessions.orientation": "stacked",
+    "diffEditor.codeLens": true,
+    "editor.formatOnSave": true,
+    "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/env": true,
+    "**/venv": true
+  },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/env/**": true,
+        "**/venv/**": true,
+        "env-*": true
     },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8"
-    },
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "telemetry.editStats.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
-    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.js",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        "tsconfig.json": "tsconfig.*.json",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
-        "*.sqlite": "${capture}.${extname}-*",
-        "*.db": "${capture}.${extname}-*",
-        "*.sqlite3": "${capture}.${extname}-*",
-        "*.db3": "${capture}.${extname}-*",
-        "*.sdb": "${capture}.${extname}-*",
-        "*.s3db": "${capture}.${extname}-*"
+    "python.analysis.typeCheckingMode": "standard",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    "workbench.colorTheme": "Dark Modern",
+    "clangd.detectExtensionConflicts": false,
+    "[cuda-cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
-    "[dockercompose]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    "[starlark]": {
+        "editor.defaultFormatter": "BazelBuild.vscode-bazel"
     },
-    "python.languageServer": "Default",
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    
     },
-    "editor.fontLigatures": true,
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "chat.viewSessions.orientation": "stacked",
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "diffEditor.codeLens": true,
-    "editor.formatOnSave": true,
-    "workbench.colorTheme": "Islands Dark",
 }
