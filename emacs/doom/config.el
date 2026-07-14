@@ -33,10 +33,11 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;
-(setq doom-theme 'doom-dark+)
-;; THEMES: gruvbox-dark-medium, vscode-dark-plus, doom-monokai-specturm, doom-gruvbox, naysayer, github-dark, doom-dark+, doom-one
+(setq doom-theme 'doom-tokyo-night)
+;; THEMES: gruvbox-dark-medium, vscode-dark-plus, doom-monokai-specturm, doom-gruvbox, naysayer, github-dark, doom-dark+, doom-one,
+;; doom-dracula, doom-tokyo-night
 
-(setq doom-font (font-spec :family "Menlo" :size 14 :weight 'regular))
+(setq doom-font (font-spec :family "Menlo" :size 16 :weight 'regular))
 ;; cascadia for visual studio, menlo for vscode mac, JetBrains Mono, SF Mono
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -49,16 +50,16 @@
 (setq treemacs--width-is-locked nil)
 (setq treemacs-width-is-initially-locked nil)
 
-(use-package! whitespace
-  :config
-  (setq
-   whitespace-style '(face tabs tab-mark spaces space-mark trailing newline newline-mark)
-   whitespace-display-mappings '(
-                                 (space-mark   ?\     [?\u00B7]     [?.])
-                                 (space-mark   ?\xA0  [?\u00B7]     [?_])
-                                 (newline-mark ?\n    [?\u00B7 ?\n])
-                                 (tab-mark     ?\t    [?\u00B7 ?\t] [?\\ ?\t])))
-  (global-whitespace-mode +1))
+;; (use-package! whitespace
+;;   :config
+;;   (setq
+;;    whitespace-style '(face tabs tab-mark spaces space-mark trailing newline newline-mark)
+;;    whitespace-display-mappings '(
+;;                                  (space-mark   ?\     [?\u00B7]     [?.])
+;;                                  (space-mark   ?\xA0  [?\u00B7]     [?_])
+;;                                  (newline-mark ?\n    [?\u00B7 ?\n])
+;;                                  (tab-mark     ?\t    [?\u00B7 ?\t] [?\\ ?\t])))
+;;   (global-whitespace-mode +1))
 ;; (custom-set-faces!
 ;;   `(line-number :foreground "#30363", :background "#30363")
 ;;   `(whitespace-space :foreground "#30363d")

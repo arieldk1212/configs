@@ -51,7 +51,7 @@
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        ;;window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
-       ;;zen               ; distraction-free coding or writing
+       zen               ; distraction-free coding or writing
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
@@ -72,7 +72,7 @@
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        ;;eww               ; the internet is gross
-       ;;ibuffer           ; interactive buffer management
+       ibuffer           ; interactive buffer management
        tramp             ; remote files at your arthritic fingertips
        undo              ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
@@ -154,7 +154,7 @@
        ;;ledger            ; be audit you can be
        ;;lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
-       ;;nim               ; python + lisp at the speed of c
+       nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        ;;odin              ; C, minus its footguns
@@ -179,7 +179,7 @@
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        ;;web               ; the tubes
-       ;;yaml              ; JSON, but readable
+       yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
 
        :email
@@ -188,7 +188,7 @@
        ;;(wanderlust +gmail)
 
        :app
-       ;;calendar
+       calendar
        ;;emms
        ;;everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
