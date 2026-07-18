@@ -40,12 +40,12 @@
        minimap           ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink cursor line after big motions
-       neotree           ; a project drawer, like NERDTree for vim
+       ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        smooth-scroll     ; So smooth you won't believe it's not butter
        ;;tabs              ; a tab bar for Emacs
-       ;;treemacs          ; a project drawer, like neotree but cooler
+       treemacs          ; a project drawer, like neotree but cooler
        unicode           ; extended unicode support for various languages
        (vc-gutter +pretty) ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -169,7 +169,7 @@
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
-       ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+       (ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
@@ -197,3 +197,29 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+;; 1. Define a custom face for the targeted keywords
+(defface my-cpp-isolated-keyword-face
+  '((t :foreground "#b8b839"))
+  "Face for tracking targeted isolated words.")
+
+(defface my-number-highlight-face
+  '((t :foreground "#cc4631")) ; Highlights standalone numbers in red
+  "Face for highlighting numbers.")
+
+;; 2. Inject target match regex patterns into C++ mode highlight pipelines
+(defun my-custom-cpp-fontification-rules ()
+  "Add high-priority highlight rules for target tokens."
+  (font-lock-add-keywords
+   nil
+   '(;; Match explicit keywords: return, public, and private
+     ("\\<\\(return\\|public\\|private\\|if\\|break\\|while\\|noexcept\\|switch\\|case\\|static_cast\\|dynamic_cast\\|const_cast\\|reinterpret_cast\\|using\\|delete\\|default\\|this\\|continue\\)\\>" . 'my-cpp-isolated-keyword-face)
+
+     ;; Match standalone numbers (integers and decimals)
+     ("\\<[0-9]+\\(?:\\.[0-9]+\\)?\\>" . 'my-number-highlight-face)
+
+     ("\\<\\(false\\|true\\|NULL\\|nullptr\\)\\>" . 'my-number-highlight-face))))
+
+;; 3. Register the rule execution logic into the C++ hook tracker
+(add-hook 'c++-mode-hook #'my-custom-cpp-fontification-rules)
+

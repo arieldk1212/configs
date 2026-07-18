@@ -5,7 +5,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("e184d8607cc9933f2ba8e180699365bdf8b6f311834a9e15c71947b38be0caa3"
+   '("85e5c7b7f16e869d6446619d9f71e85962ffe3ac6796e9227fe13b2c26288b2a"
+     "99172f346cc15402eafb4febbbe24bc8af7b38dcda818693f29c7a8feec2dd90"
+     "2f7fa7a92119d9ed63703d12723937e8ba87b6f3876c33d237619ccbd60c96b9"
+     "21d2bf8d4d1df4859ff94422b5e41f6f2eeff14dd12f01428fa3cb4cb50ea0fb"
+     "4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d"
+     "e184d8607cc9933f2ba8e180699365bdf8b6f311834a9e15c71947b38be0caa3"
      "c7fd1708e08544d1df2cba59b85bd25263180b19b287489d4f17b9118487e718"
      "d445c7b530713eac282ecdeea07a8fa59692c83045bf84dd112dd738c7bcad1d"
      "871b064b53235facde040f6bdfa28d03d9f4b966d8ce28fb1725313731a2bcc8"
@@ -71,7 +76,8 @@
      "be0d9f0e72a4ebc4a59c382168921b082b4dc15844bdaf1353c08157806b3321"
      "0c83e0b50946e39e237769ad368a08f2cd1c854ccbcd1a01d39fdce4d6f86478"
      "7c3d62a64bafb2cc95cd2de70f7e4446de85e40098ad314ba2291fc07501b70c"
-     "8c7e832be864674c220f9a9361c851917a93f921fedb7717b1b5ece47690c098" default)))
+     "8c7e832be864674c220f9a9361c851917a93f921fedb7717b1b5ece47690c098" default))
+ '(package-selected-packages '(dracula-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

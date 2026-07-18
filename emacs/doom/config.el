@@ -33,10 +33,13 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;
-(setq doom-theme 'doom-tokyo-night)
-;; THEMES: gruvbox-dark-medium, vscode-dark-plus, doom-monokai-specturm, doom-gruvbox, naysayer, github-dark, doom-dark+, doom-one,
-;; doom-dracula, doom-tokyo-night
+;; THEMES: gruvbox-dark-medium, vscode-dark-plus, doom-monokai-classic, doom-gruvbox, naysayer, doom-dark+,
+;; doom-dracula, doom-tokyo-night, monokai
 
+(add-to-list 'custom-theme-load-path
+             (expand-file-name "themes" doom-user-dir))
+
+(setq doom-theme 'peachpuff)
 (setq doom-font (font-spec :family "Menlo" :size 16 :weight 'regular))
 ;; cascadia for visual studio, menlo for vscode mac, JetBrains Mono, SF Mono
 
@@ -86,9 +89,6 @@
         :nvie "M-<down>" #'drag-stuff-down))
 
 
-;; To stop/clear all cursors, press Escape
-
-
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
@@ -124,3 +124,4 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
