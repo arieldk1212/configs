@@ -11,7 +11,7 @@
       (pp-linenum     "#b8b839")   ; sampled line-number olive
       (pp-vscodeline  "#00a3af")
       (pp-zshfringe   "#7400FF")
-      (pp-modeline    "#2D0045")
+      (pp-modeline    "#24002E")
       ;; Derived/muted tones for structural faces the screenshot didn't
       ;; show (selection, mode-line, diff) -- built from the palette
       ;; above rather than introduced from elsewhere.
@@ -97,6 +97,8 @@
    ;; --- Parens -----------------------------------------------------
    `(show-paren-match ((t (:background ,"#00a3af" :foreground ,pp-bg))))
    `(show-paren-mismatch ((t (:background ,pp-literal :foreground ,pp-fg))))
+
+   `(hl-line ((t (:background ,pp-bg))))
 
    ))
 
