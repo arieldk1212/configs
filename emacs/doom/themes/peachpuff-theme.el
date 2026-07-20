@@ -2,16 +2,16 @@
 
 (deftheme peachpuff "peachpuff")
 
-(let ((pp-bg          "#212121")   ; sampled background
+(let ((pp-bg          "#1F1F1F")   ; sampled background
       (pp-fg          "#FFFFFF")   ; sampled default text / variables
       (pp-comment     "#55F037")   ; sampled comment green
-      (pp-preproc     "#DC4AE0")   ; sampled preprocessor pink
+      (pp-preproc     "#DF4BE3")   ; sampled preprocessor pink
       (pp-keyword     "#4EBE36")   ; sampled keyword/type green
-      (pp-literal     "#CC4631")   ; sampled string/number/bool orange
-      (pp-linenum     "#b8b839")   ; sampled line-number olive
+      (pp-literal     "#CC4225")   ; sampled string/number/bool orange
+      (pp-linenum     "#BDBD3A")   ; sampled line-number olive
       (pp-vscodeline  "#00a3af")
       (pp-zshfringe   "#7400FF")
-      (pp-modeline    "#24002E")
+      (pp-modeline    "#48005C")
       ;; Derived/muted tones for structural faces the screenshot didn't
       ;; show (selection, mode-line, diff) -- built from the palette
       ;; above rather than introduced from elsewhere.
@@ -45,7 +45,7 @@
 
    ;; --- Line numbers -----------------------------------------------
    `(line-number ((t (:foreground ,pp-linenum))))
-   `(line-number-current-line ((t (:foreground ,pp-vscodeline))))
+   `(line-number-current-line ((t (:foreground ,pp-vscodeline :background ,pp-gray-dim))))
 
    ;; --- Windows / mode line -------------------------------------------
    `(mode-line ((t (:background ,pp-modeline :foreground ,pp-fg))))
@@ -77,7 +77,7 @@
    ;; Keywords and type names share the sampled green
    `(font-lock-keyword-face ((t (:foreground ,pp-keyword))))
    `(font-lock-type-face ((t (:foreground ,pp-keyword))))
-   `(font-lock-builtin-face ((t (:foreground ,pp-keyword))))
+   `(font-lock-builtin-face ((t (:foreground ,pp-fg))))
    `(font-lock-negation-char-face ((t (:foreground ,pp-literal))))
    ;; Preprocessor directives
    `(font-lock-preprocessor-face ((t (:foreground ,pp-preproc))))
@@ -95,10 +95,10 @@
    `(diff-file-header ((t (:background ,pp-gray-dim :foreground ,pp-preproc :weight bold))))
 
    ;; --- Parens -----------------------------------------------------
-   `(show-paren-match ((t (:background ,"#00a3af" :foreground ,pp-bg))))
+   `(show-paren-match ((t (:background ,pp-vscodeline :foreground ,pp-bg))))
    `(show-paren-mismatch ((t (:background ,pp-literal :foreground ,pp-fg))))
 
-   `(hl-line ((t (:background ,pp-bg))))
+   `(hl-line ((t (:background ,pp-gray-dim))))
 
    ))
 

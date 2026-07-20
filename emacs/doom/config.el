@@ -40,7 +40,7 @@
              (expand-file-name "themes" doom-user-dir))
 
 (setq doom-theme 'peachpuff)
-(setq doom-font (font-spec :family "Menlo" :size 16 :weight 'regular))
+(setq doom-font (font-spec :family "Menlo" :size 15 :weight 'regular))
 ;; cascadia for visual studio, menlo for vscode mac, JetBrains Mono, SF Mono
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -49,9 +49,11 @@
 
 (xterm-mouse-mode 1)
 (blink-cursor-mode 1)
-(setq treemacs-width 30)
+(setq treemacs-width 20)
 (setq treemacs--width-is-locked nil)
 (setq treemacs-width-is-initially-locked nil)
+(setq neo-window-width 20)
+(setq neo-window-fixed-size nil)
 
 ;; (use-package! whitespace
 ;;   :config
