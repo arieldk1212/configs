@@ -55,6 +55,12 @@
 (setq neo-window-width 20)
 (setq neo-window-fixed-size nil)
 
+(map! :leader
+      :desc "Display errors at bottom"
+      "e e" #'flycheck-list-errors)
+
+(global-set-key (kbd "C-c o") 'ff-find-other-file)
+
 ;; (use-package! whitespace
 ;;   :config
 ;;   (setq

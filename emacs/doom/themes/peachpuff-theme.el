@@ -2,16 +2,18 @@
 
 (deftheme peachpuff "peachpuff")
 
-(let ((pp-bg          "#1F1F1F")   ; sampled background
+(let ((pp-bg          "#1d1d1d")   ; sampled background
       (pp-fg          "#FFFFFF")   ; sampled default text / variables
       (pp-comment     "#55F037")   ; sampled comment green
       (pp-preproc     "#DF4BE3")   ; sampled preprocessor pink
       (pp-keyword     "#4EBE36")   ; sampled keyword/type green
-      (pp-literal     "#CC4225")   ; sampled string/number/bool orange
+      (pp-literal     "#C74724")   ; sampled string/number/bool orange C74724
       (pp-linenum     "#BDBD3A")   ; sampled line-number olive
       (pp-vscodeline  "#00a3af")
       (pp-zshfringe   "#7400FF")
       (pp-modeline    "#48005C")
+      (pp-black       "#000000")
+      (pp-cyan        "#00CFCF")
       ;; Derived/muted tones for structural faces the screenshot didn't
       ;; show (selection, mode-line, diff) -- built from the palette
       ;; above rather than introduced from elsewhere.
@@ -60,6 +62,7 @@
    `(warning ((t (:foreground ,pp-literal :weight bold))))
    `(error ((t (:background ,pp-literal :foreground ,pp-fg :weight bold))))
    `(trailing-whitespace ((t (:background ,pp-literal))))
+   `(popup-tip-face ((t (:background ,pp-modeline :foreground ,pp-fg))))
 
    ;; --- Misc widgets -------------------------------------------------
    `(widget-field ((t (:background ,pp-gray-dim :foreground ,pp-fg))))
@@ -72,13 +75,14 @@
    `(font-lock-comment-delimiter-face ((t (:foreground ,pp-comment))))
    `(font-lock-doc-face ((t (:foreground ,pp-comment))))
    ;; Strings / numbers / booleans -- one orange in the screenshot
-   `(font-lock-constant-face ((t (:foreground ,pp-fg))))
+   `(font-lock-constant-face ((t (:foreground ,pp-vscodeline))))
    `(font-lock-string-face ((t (:foreground ,pp-literal))))
    ;; Keywords and type names share the sampled green
    `(font-lock-keyword-face ((t (:foreground ,pp-keyword))))
-   `(font-lock-type-face ((t (:foreground ,pp-keyword))))
+   `(font-lock-type-face ((t (:foreground ,pp-fg))))
    `(font-lock-builtin-face ((t (:foreground ,pp-fg))))
-   `(font-lock-negation-char-face ((t (:foreground ,pp-literal))))
+   `(font-lock-negation-char-face ((t (:foreground ,pp-cyan))))
+   `(font-lock-extra-types ((t (:foreground ,pp-cyan))))
    ;; Preprocessor directives
    `(font-lock-preprocessor-face ((t (:foreground ,pp-preproc))))
    ;; Functions and variables were plain white in the screenshot
