@@ -13,7 +13,7 @@
       (pp-zshfringe   "#7400FF")
       (pp-modeline    "#48005C")
       (pp-black       "#000000")
-      (pp-cyan        "#00CFCF")
+      (pp-cyan        "#00BDCC")
       ;; Derived/muted tones for structural faces the screenshot didn't
       ;; show (selection, mode-line, diff) -- built from the palette
       ;; above rather than introduced from elsewhere.
@@ -47,7 +47,7 @@
 
    ;; --- Line numbers -----------------------------------------------
    `(line-number ((t (:foreground ,pp-linenum))))
-   `(line-number-current-line ((t (:foreground ,pp-vscodeline :background ,pp-gray-dim))))
+   `(line-number-current-line ((t (:foreground ,pp-cyan :background ,pp-gray-dim :weight bold))))
 
    ;; --- Windows / mode line -------------------------------------------
    `(mode-line ((t (:background ,pp-modeline :foreground ,pp-fg))))
@@ -75,7 +75,7 @@
    `(font-lock-comment-delimiter-face ((t (:foreground ,pp-comment))))
    `(font-lock-doc-face ((t (:foreground ,pp-comment))))
    ;; Strings / numbers / booleans -- one orange in the screenshot
-   `(font-lock-constant-face ((t (:foreground ,pp-vscodeline))))
+   `(font-lock-constant-face ((t (:foreground ,pp-cyan))))
    `(font-lock-string-face ((t (:foreground ,pp-literal))))
    ;; Keywords and type names share the sampled green
    `(font-lock-keyword-face ((t (:foreground ,pp-keyword))))
