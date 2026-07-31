@@ -107,7 +107,7 @@
        pdf               ; pdf enhancements
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
-       ;;tree-sitter       ; syntax and parsing, sitting in a tree...
+       tree-sitter       ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
@@ -197,29 +197,4 @@
        :config
        ;;literate
        (default +bindings +smartparens))
-
-;; 1. Define a custom face for the targeted keywords
-(defface my-cpp-isolated-keyword-face
-  '((t :foreground "#b8b839"))
-  "Face for tracking targeted isolated words.")
-
-(defface my-number-highlight-face
-  '((t :foreground "#cc4631")) ; Highlights standalone numbers in red
-  "Face for highlighting numbers.")
-
-;; 2. Inject target match regex patterns into C++ mode highlight pipelines
-(defun my-custom-cpp-fontification-rules ()
-  "Add high-priority highlight rules for target tokens."
-  (font-lock-add-keywords
-   nil
-   '(;; Match explicit keywords: return, public, and private
-     ("\\<\\(return\\|public\\|private\\|if\\|break\\|while\\|noexcept\\|switch\\|case\\|static_cast\\|dynamic_cast\\|const_cast\\|reinterpret_cast\\|using\\|delete\\|default\\|this\\|continue\\)\\>" . 'my-cpp-isolated-keyword-face)
-
-     ;; Match standalone numbers (integers and decimals)
-     ("\\<[0-9]+\\(?:\\.[0-9]+\\)?\\>" . 'my-number-highlight-face)
-
-     ("\\<\\(false\\|true\\|NULL\\|nullptr\\)\\>" . 'my-number-highlight-face))))
-
-;; 3. Register the rule execution logic into the C++ hook tracker
-(add-hook 'c++-mode-hook #'my-custom-cpp-fontification-rules)
 

@@ -2,6 +2,35 @@
 
 (deftheme peachpuff "peachpuff")
 
+;; --- Custom extra faces + C++ token highlighting ----------------------
+;; (moved here from init.el so init.el stays clean; this all travels with
+;; the theme now instead of being loaded separately at startup)
+
+;; 1. Define a custom face for the targeted keywords
+(defface my-cpp-isolated-keyword-face
+  '((t :foreground "#b8b839"))
+  "Face for tracking targeted isolated words.")
+
+(defface my-number-highlight-face
+  '((t :foreground "#cc4631")) ; Highlights standalone numbers in red
+  "Face for highlighting numbers.")
+
+;; 2. Inject target match regex patterns into C++ mode highlight pipelines
+(defun my-custom-cpp-fontification-rules ()
+  "Add high-priority highlight rules for target tokens."
+  (font-lock-add-keywords
+   nil
+   '(;; Match explicit keywords: return, public, and private
+     ("\\<\\(return\\|public\\|private\\|if\\|break\\|while\\|noexcept\\|switch\\|case\\|static_cast\\|dynamic_cast\\|const_cast\\|reinterpret_cast\\|using\\|delete\\|default\\|this\\|continue\\)\\>" . 'my-cpp-isolated-keyword-face)
+
+     ;; Match standalone numbers (integers and decimals)
+     ("\\<[0-9]+\\(?:\\.[0-9]+\\)?\\>" . 'my-number-highlight-face)
+
+     ("\\<\\(false\\|true\\|NULL\\|nullptr\\)\\>" . 'my-number-highlight-face))))
+
+;; 3. Register the rule execution logic into the C++ hook tracker
+(add-hook 'c++-mode-hook #'my-custom-cpp-fontification-rules)
+
 (let ((pp-bg          "#1d1d1d")   ; sampled background
       (pp-fg          "#FFFFFF")   ; sampled default text / variables
       (pp-comment     "#55F037")   ; sampled comment green
