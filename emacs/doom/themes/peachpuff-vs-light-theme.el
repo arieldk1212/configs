@@ -1,6 +1,6 @@
-;;; peachpuff-light-theme.el
+;;; peachpuff-vs-light-theme.el
 
-(deftheme peachpuff-light "peachpuff, light variant")
+(deftheme peachpuff-vs-light "peachpuff, light variant")
 
 ;; --- Custom extra faces + C++ token highlighting ----------------------
 ;; Same hook/faces as the dark peachpuff theme -- kept as-is (your own
@@ -56,7 +56,7 @@
       (pp-folded-bg   "#F2F2E3")) ; pale olive tint, for folds
 
   (custom-theme-set-faces
-   'peachpuff-light
+   'peachpuff-vs-light
 
    ;; --- Basic / UI faces --------------------------------------------
    `(default ((t (:background ,pp-bg :foreground ,pp-fg))))
@@ -140,6 +140,6 @@
 
    ))
 
-(provide-theme 'peachpuff-light)
+(provide-theme 'peachpuff-vs-light)
 
-;;; peachpuff-light-theme.el ends here
+;;; peachpuff-vs-light-theme.el ends here

@@ -39,8 +39,8 @@
 (add-to-list 'custom-theme-load-path
              (expand-file-name "themes" doom-user-dir))
 
-(setq doom-theme 'vs-light)
-(setq doom-font (font-spec :family "Menlo" :size 17 :weight 'regular))
+(setq doom-theme 'peachpuff-light)
+(setq doom-font (font-spec :family "Consolas" :size 18 :weight 'regular))
 ;; Cascadia Mono, Menlo, SF Mono, Fira Code, Space Mono
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
