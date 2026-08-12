@@ -1,0 +1,140 @@
+;;; peachpuff-theme.el
+
+(deftheme peachpuff "peachpuff")
+
+;; --- Custom extra faces + C++ token highlighting ----------------------
+;; (moved here from init.el so init.el stays clean; this all travels with
+;; the theme now instead of being loaded separately at startup)
+
+;; 1. Define a custom face for the targeted keywords
+(defface my-cpp-isolated-keyword-face
+  '((t :foreground "#b8b839"))
+  "Face for tracking targeted isolated words.")
+
+(defface my-number-highlight-face
+  '((t :foreground "#cc4631")) ; Highlights standalone numbers in red
+  "Face for highlighting numbers.")
+
+;; 2. Inject target match regex patterns into C++ mode highlight pipelines
+(defun my-custom-cpp-fontification-rules ()
+  "Add high-priority highlight rules for target tokens."
+  (font-lock-add-keywords
+   nil
+   '(;; Match explicit keywords: return, public, and private
+     ("\\<\\(return\\|public\\|private\\|if\\|break\\|while\\|noexcept\\|switch\\|case\\|static_cast\\|dynamic_cast\\|const_cast\\|reinterpret_cast\\|using\\|delete\\|default\\|this\\|continue\\)\\>" . 'my-cpp-isolated-keyword-face)
+
+     ;; Match standalone numbers (integers and decimals)
+     ("\\<[0-9]+\\(?:\\.[0-9]+\\)?\\>" . 'my-number-highlight-face)
+
+     ("\\<\\(false\\|true\\|NULL\\|nullptr\\)\\>" . 'my-number-highlight-face))))
+
+;; 3. Register the rule execution logic into the C++ hook tracker
+(add-hook 'c++-mode-hook #'my-custom-cpp-fontification-rules)
+
+(let ((pp-bg          "#1d1d1d")   ; sampled background
+      (pp-fg          "#FFFFFF")   ; sampled default text / variables
+      (pp-comment     "#55F037")   ; sampled comment green
+      (pp-preproc     "#DF4BE3")   ; sampled preprocessor pink
+      (pp-keyword     "#4EBE36")   ; sampled keyword/type green
+      (pp-literal     "#C74724")   ; sampled string/number/bool orange C74724
+      (pp-linenum     "#BDBD3A")   ; sampled line-number olive
+      (pp-vscodeline  "#00a3af")
+      (pp-zshfringe   "#7400FF")
+      (pp-modeline    "#48005C")
+      (pp-black       "#000000")
+      (pp-cyan        "#00BDCC")
+      ;; Derived/muted tones for structural faces the screenshot didn't
+      ;; show (selection, mode-line, diff) -- built from the palette
+      ;; above rather than introduced from elsewhere.
+      (pp-gray-dim    "#303030")   ; sampled neutral (widget/box bg)
+      (pp-gray-mid    "#909090")   ; sampled neutral (muted text)
+      (pp-select-bg   "#383838")
+      (pp-comment-dk  "#1F3D18")   ; darkened comment green, for diff bg
+      (pp-literal-dk  "#3D1F16")   ; darkened literal orange, for diff bg
+      (pp-preproc-dk  "#3D1A3D")   ; darkened preproc pink, for diff bg
+      (pp-folded-bg   "#3A3A20"))  ; darkened line-number olive, for folds
+
+  (custom-theme-set-faces
+   'peachpuff
+
+   ;; --- Basic / UI faces --------------------------------------------
+   `(default ((t (:background ,pp-bg :foreground ,pp-fg))))
+   `(cursor ((t (:background ,pp-fg :foreground ,pp-bg))))
+   `(fringe ((t (:background ,pp-bg :foreground ,pp-zshfringe))))
+   `(region ((t (:background ,pp-select-bg :foreground ,pp-fg))))
+   `(secondary-selection ((t (:background ,pp-literal :foreground ,pp-bg))))
+   `(highlight ((t (:background ,pp-select-bg))))
+   `(shadow ((t (:foreground ,pp-gray-mid))))
+   `(minibuffer-prompt ((t (:foreground ,pp-comment))))
+   `(link ((t (:foreground ,pp-preproc :underline t))))
+   `(link-visited ((t (:foreground ,pp-keyword :underline t))))
+
+   ;; --- Search -------------------------------------------------------
+   `(isearch ((t (:background ,pp-fg :foreground ,pp-bg))))
+   `(lazy-highlight ((t (:background ,pp-linenum :foreground ,pp-bg))))
+   `(match ((t (:background ,pp-literal :foreground ,pp-bg))))
+
+   ;; --- Line numbers -----------------------------------------------
+   `(line-number ((t (:foreground ,pp-linenum))))
+   `(line-number-current-line ((t (:foreground ,pp-cyan :background ,pp-gray-dim :weight bold))))
+
+   ;; --- Windows / mode line -------------------------------------------
+   `(mode-line ((t (:background ,pp-gray-dim :foreground ,pp-fg))))
+   `(mode-line-inactive ((t (:background ,pp-gray-dim :foreground ,pp-gray-mid))))
+   `(vertical-border ((t (:background ,pp-fg :foreground ,pp-gray-mid))))
+   `(header-line ((t (:background ,pp-fg :foreground ,pp-fg))))
+   `(mode-line-buffer-id ((t (:foreground ,pp-fg))))
+   `(outline-1 ((t (:foreground ,pp-fg))))
+
+   ;; --- Messages ---------------------------------------------------
+   `(success ((t (:foreground ,pp-comment :weight bold))))
+   `(warning ((t (:foreground ,pp-literal :weight bold))))
+   `(error ((t (:background ,pp-literal :foreground ,pp-fg :weight bold))))
+   `(trailing-whitespace ((t (:background ,pp-literal))))
+   `(popup-tip-face ((t (:background ,pp-modeline :foreground ,pp-fg))))
+
+   ;; --- Misc widgets -------------------------------------------------
+   `(widget-field ((t (:background ,pp-gray-dim :foreground ,pp-fg))))
+   `(hs-face ((t (:background ,pp-folded-bg :foreground ,pp-linenum))))
+   `(hs-fringe-face ((t (:background ,pp-gray-dim :foreground ,pp-comment))))
+
+   ;; --- Syntax highlighting -----------------------------------------
+   ;; Comments
+   `(font-lock-comment-face ((t (:foreground ,pp-comment))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,pp-comment))))
+   `(font-lock-doc-face ((t (:foreground ,pp-comment))))
+   ;; Strings / numbers / booleans -- one orange in the screenshot
+   `(font-lock-constant-face ((t (:foreground ,pp-cyan))))
+   `(font-lock-string-face ((t (:foreground ,pp-literal))))
+   ;; Keywords and type names share the sampled green
+   `(font-lock-keyword-face ((t (:foreground ,pp-keyword))))
+   `(font-lock-type-face ((t (:foreground ,pp-fg))))
+   `(font-lock-builtin-face ((t (:foreground ,pp-fg))))
+   `(font-lock-negation-char-face ((t (:foreground ,pp-cyan))))
+   `(font-lock-extra-types ((t (:foreground ,pp-cyan))))
+   ;; Preprocessor directives
+   `(font-lock-preprocessor-face ((t (:foreground ,pp-preproc))))
+   ;; Functions and variables were plain white in the screenshot
+   `(font-lock-function-name-face ((t (:foreground ,pp-fg))))
+   `(font-lock-variable-name-face ((t (:foreground ,pp-fg))))
+   `(font-lock-warning-face ((t (:background ,pp-literal :foreground ,pp-fg))))
+
+   ;; --- Diff ------------------------------------------------------
+   `(diff-added ((t (:background ,pp-comment-dk :foreground ,pp-comment :weight bold))))
+   `(diff-removed ((t (:background ,pp-literal-dk :foreground ,pp-literal :weight bold))))
+   `(diff-changed ((t (:background ,pp-preproc-dk :foreground ,pp-preproc :weight bold))))
+   `(diff-refine-changed ((t (:background ,pp-preproc :foreground ,pp-bg :weight bold))))
+   `(diff-header ((t (:background ,pp-gray-dim :foreground ,pp-linenum))))
+   `(diff-file-header ((t (:background ,pp-gray-dim :foreground ,pp-preproc :weight bold))))
+
+   ;; --- Parens -----------------------------------------------------
+   `(show-paren-match ((t (:background ,pp-vscodeline :foreground ,pp-bg))))
+   `(show-paren-mismatch ((t (:background ,pp-literal :foreground ,pp-fg))))
+
+   `(hl-line ((t (:background ,pp-gray-dim))))
+
+   ))
+
+(provide-theme 'peachpuff)
+
+;;; peachpuff-theme.el ends here
