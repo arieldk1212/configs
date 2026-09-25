@@ -1,0 +1,5 @@
+theme = "doom-one"
+
+[editor]
+auto-format = true
+bufferline = "always"
