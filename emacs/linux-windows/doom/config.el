@@ -39,7 +39,7 @@
 (add-to-list 'custom-theme-load-path
              (expand-file-name "themes" doom-user-dir))
 
-(setq doom-theme 'peachpuff)
+(setq doom-theme 'doom-gruvbox)
 (setq doom-font (font-spec :family "Cascadia Mono" :size 17 :weight 'regular))
 ;; Cascadia Mono, Menlo, SF Mono, Fira Code, Space Mono
 
@@ -101,6 +101,21 @@
   (map! :nvie "M-<up>"   #'drag-stuff-up
         :nvie "M-<down>" #'drag-stuff-down))
 
+
+(use-package! highlight-symbol
+  :hook (prog-mode . highlight-symbol-mode)
+  :config
+  (setq highlight-symbol-on-navigation-p t))
+
+(use-package! highlight-numbers
+  :hook (prog-mode . highlight-numbers-mode))
+
+(use-package! imenu-list
+  :config
+  (setq imenu-list-focus-after-activation t))
+
+(map! :leader
+      :desc "Toggle imenu list" "o i" #'imenu-list-smart-toggle)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!

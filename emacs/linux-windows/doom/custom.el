@@ -5,7 +5,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("85e5c7b7f16e869d6446619d9f71e85962ffe3ac6796e9227fe13b2c26288b2a"
+   '("23a379d966ea18a63416f84deb8971a0732e60f9f87215bc862eb6c3cdbf862a"
+     "85e5c7b7f16e869d6446619d9f71e85962ffe3ac6796e9227fe13b2c26288b2a"
      "99172f346cc15402eafb4febbbe24bc8af7b38dcda818693f29c7a8feec2dd90"
      "2f7fa7a92119d9ed63703d12723937e8ba87b6f3876c33d237619ccbd60c96b9"
      "21d2bf8d4d1df4859ff94422b5e41f6f2eeff14dd12f01428fa3cb4cb50ea0fb"
